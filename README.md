@@ -1,1 +1,3 @@
 # genius-lyric-scraper
+
+The file scraper.rb uses Nokogiri and HTTParty to web scrape the Genius.com website. It takes a command line argument, <em>n</em> stringss that denote an artist's name, where <em>n</em> > 1. It first scrapes the artist's page to return an array of albums. Then for each album, it scrapes that album page to return an array of songs. For each song, it scrapes the song page using the appropriate HTML property tag to return a lyric, appending that lyric into a larger array of lyrics. Ultimately, it parses each song in each album for that artists and appends all the lyrics together into one giant array, which it then writes into a .txt file.
